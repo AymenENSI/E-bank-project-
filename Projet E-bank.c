@@ -15,7 +15,6 @@ typedef struct email{    // email de la forme : enom.eprenom@gmail.com
     char eprenom[20];
 }email;
 
-
 typedef struct client{
     int ID_client ;      // Identifiant unique du client
     char Nom[20];       //nom du client
@@ -566,46 +565,12 @@ switch(choice){
 }
 }
 
-
-
-
-
-
-
-
-
-
-
-/*int main(){
-    menu();
-}*/
 int main() {
     menu();
     /*FILE *fichier;
     char nom_fichier[50];
 
-    // Demander � l'utilisateur le nom du fichier
-    printf("Entrez le nom du fichier binaire : ");
-    scanf("%s", nom_fichier);
-
-    // Ouvrir le fichier en mode lecture binaire
-    fichier = fopen(nom_fichier, "rb");
-
-    // V�rifier si le fichier est ouvert avec succ�s
-    if (fichier == NULL) {
-        printf("Impossible d'ouvrir le fichier.\n");
-        return 1;  // Quitter le programme avec code d'erreur
-    }
-
-    // Lire et afficher le contenu du fichier octet par octet
-    int octet;
-    while ((octet = fgetc(fichier)) != EOF) {
-        printf("%02X ", octet);  // Afficher l'octet en format hexad�cimal
-    }
-
-    // Fermer le fichier
-    fclose(fichier);*/
-
+   
     return 0;
 }
 
