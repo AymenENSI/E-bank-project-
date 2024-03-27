@@ -131,7 +131,7 @@ void menu_secondaire(int choix){
             break;
         case 2:   // Gestion du compte
             menu_compte();
-            /*printf("1: Cr�artion d'un compte \n");
+            /*printf("1: Créartion d'un compte \n");
             printf("2: Recherche\n");
             printf("3: Consultation du solde \n");
             printf("4: Fermeture du compte \n");
@@ -140,7 +140,7 @@ void menu_secondaire(int choix){
             scanf("%d", &chx);
             //cmd_compte(chx);*/
             break;
-        case 3:   // Gestion des op�rations
+        case 3:   // Gestion des opérations
             menu_operation();
             /*printf("1: Retrait\n");
             printf("2: Versement d'argent\n");
@@ -149,7 +149,7 @@ void menu_secondaire(int choix){
             scanf("%d", &chx);
             //gerer_operation(chx);*/
             break;
-        case 4:     // Param�tre
+        case 4:     // Paramètre
             parametre();
             /*printf("1:changer la langue\n");
             printf("2:changer le mot de passe\n");
@@ -237,7 +237,7 @@ switch (chx){
         /*client cl;
         FILE *fichier_client;
 
-        //Les coordonn�es du client
+        //Les coordonnées du client
         printf("Mettez ID client\n:");
         scanf("%d",&cl.ID_client);
         printf("Nom client :\n");
@@ -264,7 +264,7 @@ switch (chx){
         if (fichier_client== NULL ){
             printf("Erreur:echec d'ouverture du fichier\n");
         }else{
-            printf("L'op�ration d'enregistrement du client est faite\n ");
+            printf("L'opération d'enregistrement du client est faite\n ");
         }
         fwrite(&cl,sizeof(client),1,fichier_client);
         fclose(fichier_client);
@@ -301,7 +301,7 @@ switch (chx){
                                     break;
 
                             case 2:
-                                    printf("Nouveau Nom client :\n"); //Changement du nom Possible apr�s le passage devant le juge
+                                    printf("Nouveau Nom client :\n"); //Changement du nom Possible après le passage devant le juge
                                     scanf("%s",&nvcl.Nom);
                                     break;
                             case 3:
@@ -364,7 +364,7 @@ switch (chx){
                     rename("fich_inter.dat","fichier_client.dat");
 
                 }else{
-                    printf("Le client n'est pas un adh�rant de la banque");
+                    printf("Le client n'est pas un adhérant de la banque");
                 }
             }
             break;
@@ -387,11 +387,11 @@ switch (chx){
 void creer_compte(client cl){
     compte cpt;
     Date dt;
-    time_t temps_actuel;         // cr�ation dune varaible de type time_t
-    time(&temps_actuel);         //// extraire le temps actuel en secondes depuis l'�poque (1er janvier 1970)
-    struct tm *date_locale = localtime(&temps_actuel); //convertir le temps (exprim� en secondes depuis l'�poque) stock� dans la variable temps_actuel en une structure tm repr�sentant la date et l'heure locales
+    time_t temps_actuel;         // création dune varaible de type time_t
+    time(&temps_actuel);         //// extraire le temps actuel en secondes depuis (1er janvier 1970)
+    struct tm *date_locale = localtime(&temps_actuel); //convertir le temps (exprimer en secondes depuis) stocké dans la variable temps_actuel en une structure tm repr�sentant la date et l'heure locales
 
-    printf("donner le numero de compte :\n");   // num�ro de compte entr� � la main
+    printf("donner le numero de compte :\n");   // numéro de compte entré à la main
     scanf("%d",&cpt.num_compte);
     cpt.ID_client=cl.ID_client;
     printf("Type de compte que vous voulez ouvrir:\n");
@@ -404,8 +404,8 @@ void creer_compte(client cl){
     //Mettre le solde  10 dt
     cpt.solde=10;
 
-    cpt.prop_compte=cl;    // Mettre le propri�taire de compte
-    tab_Compte[nb_client-1]=cpt;     //j'ai ajout� -1 car l'incr�mentation du nombre des client et avant l'ajout du compte au tab_compte
+    cpt.prop_compte=cl;    // Mettre le propriétaire de compte
+    tab_Compte[nb_client-1]=cpt;     //j'ai ajouté -1 car l'incrémentation du nombre des client est avant l'ajout du compte au tab_compte
 
     printf(" Succès Opération \n");
 
@@ -556,7 +556,7 @@ void cmd_operation(int vch){
 
 void cmd_setting(int choice){
 switch(choice){
-    case 1://changer la langue             // j'ai décider de ne pas terminer cette fonctionalité ,mais je l'ai entamé car j'ai des idées de developpement de code après la fin de remise de projet
+    case 1://changer la langue             
         break;
     case 2:
         break;
